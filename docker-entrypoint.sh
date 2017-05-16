@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-exec litecoind -printtoconsole "$@"
+exec litecoind -datadir=/litecoin -printtoconsole "$@"

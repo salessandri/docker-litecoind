@@ -27,8 +27,6 @@ RUN apt-get remove --purge -y \
         dirmngr && \
     apt-get autoremove --purge -y
 
-
-ENV HOME /litecoin
 VOLUME ["/litecoin"]
 
 EXPOSE 9333
