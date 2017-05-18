@@ -7,23 +7,24 @@
 # container.
 #
 
-set -ex
+set -e
 
-if [[ -e "/litecoin/litecoin.conf" ]]; then
+if [ -e "/litecoin/litecoin.conf" ]; then
     exit 0
 fi
 
-MAX_CONNECTIONS=${MAX_CONNECTIONS:-125}
-RPC_USER=${RPC_USER:-litecoinrpc}
-RPC_PASSWORD=${RPC_PASSWORD:-$(dd if=/dev/urandom bs=20 count=1 2>/dev/null | base64)}
-
-if [[ -z ${ENABLE_WALLET:+x} ]]; then
+if [ -z ${ENABLE_WALLET:+x} ]; then
     echo "disablewallet=1" >> "/litecoin/litecoin.conf"
 fi
 
-echo "maxconnection=${MAX_CONNECTION}" >> "/litecoin/litecoin.conf"
+if [ ! -z ${MAX_CONNECTIONS:+x} ]; then
+    echo "maxconnection=${MAX_CONNECTIONS}" >> "/litecoin/litecoin.conf"
+fi
 
-if [[ ! -z ${RPC_SERVER:+x} ]]; then
+if [ ! -z ${RPC_SERVER:+x} ]; then
+    RPC_USER=${RPC_USER:-litecoinrpc}
+    RPC_PASSWORD=${RPC_PASSWORD:-$(dd if=/dev/urandom bs=20 count=1 2>/dev/null | base64)}
+
     echo "server=1" >> "/litecoin/litecoin.conf"
     echo "rpcuser=${RPC_USER}" >> "/litecoin/litecoin.conf"
     echo "rpcpassword=${RPC_PASSWORD}" >> "/litecoin/litecoin.conf"

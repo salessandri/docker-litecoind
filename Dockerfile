@@ -31,5 +31,6 @@ VOLUME ["/litecoin"]
 
 EXPOSE 9333 9332
 
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY ["bin", "/usr/local/bin/"]
+COPY ["docker-entrypoint.sh", "/usr/local/bin/"]
 ENTRYPOINT ["docker-entrypoint.sh"]
