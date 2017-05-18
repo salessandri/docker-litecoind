@@ -1,7 +1,7 @@
 # Litecoind for Docker
 
 [![Docker Stars](https://img.shields.io/docker/stars/salessandri/docker-litecoind.svg)](https://hub.docker.com/r/salessandri/docker-litecoind/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/kylemanna/bitcoind.svg)](https://hub.docker.com/r/salessandri/docker-litecoind/
+[![Docker Pulls](https://img.shields.io/docker/pulls/salessandri/docker-litecoind.svg)](https://hub.docker.com/r/salessandri/docker-litecoind/)
 [![ImageLayers](https://images.microbadger.com/badges/image/salessandri/docker-litecoind.svg)](https://microbadger.com/images/salessandri/docker-litecoind)
 
 Docker image that runs the Litecoin litecoind node in a container for easy deployment.
