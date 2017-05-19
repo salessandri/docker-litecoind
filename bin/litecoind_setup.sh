@@ -18,7 +18,7 @@ if [ -z ${ENABLE_WALLET:+x} ]; then
 fi
 
 if [ ! -z ${MAX_CONNECTIONS:+x} ]; then
-    echo "maxconnection=${MAX_CONNECTIONS}" >> "/litecoin/litecoin.conf"
+    echo "maxconnections=${MAX_CONNECTIONS}" >> "/litecoin/litecoin.conf"
 fi
 
 if [ ! -z ${RPC_SERVER:+x} ]; then
