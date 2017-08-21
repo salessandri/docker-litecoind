@@ -9,7 +9,7 @@ RUN apt-get update && \
         gpg \
         dirmngr
 
-ARG LITECOIN_VERSION=0.13.2
+ARG LITECOIN_VERSION=0.14.2
 
 RUN \
     wget https://download.litecoin.org/litecoin-${LITECOIN_VERSION}/linux/litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz && \
