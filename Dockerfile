@@ -1,4 +1,4 @@
-FROM ubuntu:zesty
+FROM ubuntu:18.04
 
 LABEL maintainer "Santiago Alessandri <san.lt.ss@gmail.com>"
 
@@ -7,9 +7,10 @@ RUN apt-get update && \
         ca-certificates \
         wget \
         gpg \
+        gpg-agent \
         dirmngr
 
-ARG LITECOIN_VERSION=0.14.2
+ARG LITECOIN_VERSION=0.16.0
 
 RUN \
     wget https://download.litecoin.org/litecoin-${LITECOIN_VERSION}/linux/litecoin-${LITECOIN_VERSION}-x86_64-linux-gnu.tar.gz && \
