@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 LABEL maintainer "Santiago Alessandri <san.lt.ss@gmail.com>"
 
-ARG LITECOIN_VERSION=0.16.0
+ARG LITECOIN_VERSION=0.16.3
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
